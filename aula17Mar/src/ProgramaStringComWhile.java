@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ProgramaStringComWhile {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        boolean continuar = true;
+
+        while (continuar) {
+
+            System.out.println("Digite uma opcao:\n1.Bom dia!\n2.Boa tarde!\n3.Sair");
+
+            String opcao = leitor.nextLine();
+            if (opcao.charAt(0) == '1') {
+                System.out.println("Bom dia!");
+            } else if (opcao.startsWith("2")) {
+                System.out.println("Boa tarde!");
+            } else if (opcao.startsWith("3")) {
+                continuar = false;
+            } else {
+                System.out.println("Opção inválida");
+            }
+        }
+        leitor.close();
+    }
+
+}
